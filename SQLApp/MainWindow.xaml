@@ -1,0 +1,64 @@
+﻿<Window x:Class="SQLApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLApp"
+        mc:Ignorable="d"
+        Title="Andres a la app" Height="600" Width="500" MinHeight="450" MinWidth="500" MaxHeight="600" MaxWidth="800">
+    <Grid>
+		<!--#region Columns and Rows definitions-->
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="1.5*"></ColumnDefinition>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="70*"></RowDefinition>
+			<RowDefinition Height="150*"></RowDefinition>
+			<RowDefinition Height="75*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<!--#endregion-->
+		<!--#region static txt-->
+		<Label x:Name="lblTitleLogin" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  VerticalContentAlignment="top" HorizontalContentAlignment="Center" FontStretch="Medium" FontSize="48" Content="Log-in"/>
+		<Label x:Name="lblTitleSing" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalContentAlignment="top" HorizontalContentAlignment="Center" FontStretch="Medium" FontSize="48" Content="Sing-Up" Visibility="Hidden" Grid.RowSpan="2"/>
+
+
+
+		<!--#endregion-->
+		<!--#region LOG-IN logic-->
+
+		<StackPanel Grid.Column="1" Margin="5" Grid.Row="1">
+			<Label x:Name="username" Content="User" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="18"  Grid.Row="1"  Visibility="Hidden"/>
+			<TextBox x:Name="txtUserName" Grid.Column="1" Text="" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Stretch" Grid.Row="1" Visibility="Hidden"/>
+
+			<Separator Height="10" Background="{x:Null}"/>
+			<Label Content="Email" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontSize="18" Height="34" Width="52"/>
+
+			<TextBox x:Name="txtEmail" Grid.Column="1"  Grid.Row="1" Text="" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="18"  HorizontalAlignment="Stretch"  KeyUp="btnEnter"/>
+			<Label Content="Password" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center"  FontSize="18" />
+			<PasswordBox x:Name="txtPassword" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" FontSize="18" Height="25"    KeyUp="btnEnter"/>
+			<Separator Height="15" Background="{x:Null}"/>
+			<Button x:Name="btnChecklogin" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" Content="Log-in" FontSize="18"  Click="btnCheckLogin_Click" Height="28"/>
+
+			<Button x:Name="btnCheck" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Content="Register" FontSize="18" Click="btnCheck_Click" IsEnabled="False" Visibility="Hidden" Height="28"/>
+		</StackPanel>
+
+		<TextBlock x:Name="lblSpam" Text="¿Aún no te has registrado?" TextAlignment="Center" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24" Height="64" />
+		<TextBlock x:Name="lblSpamLogin" Text="¿Aún no te s sdfsdfsd?" TextAlignment="Center" Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" TextWrapping="Wrap" FontSize="24" Height="64" Visibility="Hidden" />
+
+		<Button x:Name="btnClickme" Content="Click aquí" Grid.Column="1" Grid.Row="2" VerticalAlignment="Bottom" FontSize="24" BorderBrush="#FFD47C7C" Foreground="#FFFF0707" Click="Button_Click" Height="36" Margin="10"/>
+
+		
+
+		<StackPanel Orientation="Vertical" Grid.Column="2" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Height="86" Width="98" >
+			<Label Content="Cambiar idioma:"></Label>
+			<RadioButton x:Name="rdSp" Content="Español" Checked="rdSp_Checked" />
+			<RadioButton x:Name="rdEn" Content="English" Checked="rdEn_Checked" />
+			<RadioButton x:Name="rdRus" Content="русский язык" Checked="rdRus_Checked"  />
+			<RadioButton x:Name="rdChi" Content="中国成语" Checked="rdChi_Checked" />
+		</StackPanel>
+		<TextBlock Text="Derechos reservados a: Bucket Studios" Grid.Row="2" Grid.Column="2" FontSize="24" TextWrapping="WrapWithOverflow" TextAlignment="Justify" Margin="5"/>
+		<!--#endregion-->
+	</Grid>
+</Window>

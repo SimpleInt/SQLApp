@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>E:\Portafolio per age\16y\SQLApp\SQLApp\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="resources\post\edit\EditById.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="resources\post\post.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="resources\post\UserPost.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="resources\post\view\onlyViewer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="resources\post\edit\EditById.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="resources\post\post.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="resources\post\ScrollViewDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="resources\post\UserPost.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="resources\post\view\onlyViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
